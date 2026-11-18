@@ -5,11 +5,18 @@ const nextButton = document.querySelector(".carousel__button--next");
 
 if (carousel) {
     prevButton.addEventListener("click", () => {
-        carousel.scrollBy({left: -260, behavior: "smooth"});
+        const scrollAmount = carousel.querySelector(".carousel__item").clientWidth;
+        carousel.scrollBy({left: -scrollAmount, behavior: "smooth"});
     });
 
     nextButton.addEventListener("click", () => {
-        carousel.scrollBy({left: 260, behavior: "smooth"});
+        const scrollAmount = carousel.querySelector(".carousel__item").clientWidth;
+        carousel.scrollBy({left: scrollAmount, behavior: "smooth"});
     });
 }
+
+
+
+
+
 // TODO
